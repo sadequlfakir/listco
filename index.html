@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ff8e335007.js" crossorigin="anonymous"></script>
+    <script src="./scripts.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/image/logo/favicon.ico">
+    <title>Listco</title>
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+  
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+  
+        .swiper {
+          width: 100%;
+          height: 100%;
+          display: none;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-menu-head">
+                <div class="logo-nav-profile">
+                    <div class="img-logo-head">
+                        <img src="./assets/image/logo/download.webp" alt="" class="img-logo">
+                    </div>
+                    <div class="navigation-head ">
+                        <nav class="">
+                            <ul class="navigation">
+                                <li class="">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Catagories</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Pages</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">listing Details</a></li>
+                                        <li><a href="#">Catagories</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#">Blog</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Blog Details</a></li>
+                                        <li><a href="#">Elements</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="profile-head">
+                        <a href="#" class="">
+                            <div class="profile">
+                                <i class="fa-regular fa-user"></i>
+                                Log In
+                            </div>
+                        </a>
+                        <a href="#" class="">
+                            <div class="add-lis-button">
+                                Add Listing
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--    mobile tab menu start   -->
+                <div class="main-menu">
+                    <div onclick="sidebarHandler(event)"  class="menu-head">
+                        <div class="menu">
+                            MENU
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                    <div id="sidebar" class="all-page">
+                        <ul class="">
+                            <a href="#"><li class="">Home</li></a>
+                            <a href="#"><li class="">Catagories</li></a>
+                            <a href="#"><li class="">Pages</li></a>
+                            <a href="#"><li class="">Blog</li></a>
+                            <a href="#"><li class="">Contact</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <!--    mobile tab menu end   -->
+            </div>
+            <section class="hero">
+                <div class="hero-container">
+                    <div class="hero-head-text">
+                        <h5>
+                            Explore Australia
+                        </h5>
+                        <p>
+                            Let's uncover the best places to eat, drink, and shop nearest to you.
+                        </p>
+                    </div>
+                    <!--    search box start  -->
+                    <form action="" class="search-form">
+                        <div class="search-box one">
+                            <input type="text" placeholder="what are you finding?">
+                        </div>
+                        <div class="two z">
+                            <select name="select" id="select1" class="z" >
+                                <option value="">In where?</option>
+                                <option value="">Catagories One</option>
+                                <option value="">Catagories Two</option>
+                                <option value="">Catagories Three</option>
+                                <option value="">Catagories Four</option>
+                            </select>
+                        </div>
+                        <div class="search-button-head three z">
+                            <button class="z">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                    <!--    search box end  -->
+                    <div class="hotle-food-shop">
+                        <a href="#" class="">
+                            <div class="h-f-s-item h-color">
+                                <div class="">
+                                    <i class="fa-solid fa-hotel"></i>
+                                    <div class="">
+                                        hotel
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="">
+                            <div class="h-f-s-item f-color">
+                                <div class="">
+                                    <i class="fa-solid fa-utensils"></i>
+                                    <div class="">
+                                        food
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="">
+                            <div class="h-f-s-item s-color">
+                                <div class="">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                    <div class="">
+                                        shopping
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+    <div class="page">
+        <div class="page-container">
+            <div class="explore-city">
+                <div class="explore-city-container">
+                    <div class="explore-city-text">
+                        <h2>Explore top cities</h2>
+                        <p>Let's uncover the best places to eat, drink, and shop nearest to you.</p>
+                    </div>
+                    <div class="explore-cities">
+                        <div class="new-york">
+                            <div class="n-y-image">
+                                <img src="./assets/image/city-location/xlocation1.webp" alt="" class="">
+                            </div>
+                            <div class="location-details">
+                                <h5>New York</h5>
+                                <a href="#" class="location-btn">65+ <i class="ti-plus"></i> Listing</a>
+                            </div>
+                        </div>
+                        <div class="new-york">
+                            <div class="n-y-image">
+                                <img src="./assets/image/city-location/xlocation2.webp" alt="" class="">
+                            </div>
+                            <div class="location-details">
+                                <h5>Paris</h5>
+                                <a href="#" class="location-btn">65+ <i class="ti-plus"></i> Listing</a>
+                            </div>
+                        </div>
+                        <div class="new-york flex">
+                            <div class="n-y-image">
+                                <img src="./assets/image/city-location/xlocation3.webp" alt="" class="">
+                            </div>
+                            <div class="location-details">
+                                <h5>Rome</h5>
+                                <a href="#" class="location-btn">65+ <i class="ti-plus"></i> Listing</a>
+                            </div>
+                        </div>
+                        <div class="new-york flex">
+                            <div class="n-y-image">
+                                <img src="./assets/image/city-location/xlocation4.webp" alt="" class="">
+                            </div>
+                            <div class="location-details">
+                                <h5>Italy</h5>
+                                <a href="#" class="location-btn">65+ <i class="ti-plus"></i> Listing</a>
+                            </div>
+                        </div>
+                        <div class="new-york flex">
+                            <div class="n-y-image">
+                                <img src="./assets/image/city-location/xlocation5.webp" alt="" class="">
+                            </div>
+                            <div class="location-details">
+                                <h5>Nepal</h5>
+                                <a href="#" class="location-btn">65+ <i class="ti-plus"></i> Listing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-directory">
+                <div class="popular-directory-container">
+                    <div class="explore-city-text">
+                        <h2>Popular Directory</h2>
+                        <p>Let's uncover the best places to eat, drink, and shop nearest to you.</p>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide slide-image">
+                              <div class="image">
+                                  <img src="./assets/image/p-d-image/xproperties1.webp" alt="" class="">
+                                  <div class="d-c">
+                                      <div class="d-c-i">
+                                          $$$
+                                      </div>
+                                      <div class="d-c-i">
+                                          Closed
+                                      </div>
+                                  </div>
+                                  <div class="ab">
+                                      <img src="./assets/image/p-d-image/pd-log-1.webp" alt="">
+                                  </div>
+                              </div>
+                              <div class="text">
+                                <h3><a href="#" >Urban areas</a></h3>
+                                  <p>Let's uncover the best places to eat, drink</p>
+                              </div>
+                              <div class="resturant-heart">
+                                  <div class="resturant">
+                                      <img src="./assets/image/p-d-image/pd-log-2.webp" alt="" class="">
+                                      <h3>Food & Restaurent</h3>
+                                  </div>
+                                  <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-slide slide-image">
+                              <div class="image">
+                                  <img src="./assets/image/p-d-image/xproperties2.webp" alt="" class="">
+                                  <div class="d-c">
+                                      <div class="d-c-i">
+                                          $$$
+                                      </div>
+                                      <div class="d-c-i">
+                                          Closed
+                                      </div>
+                                  </div>
+                                  <div class="ab">
+                                      <img src="./assets/image/p-d-image/pd-log-1.webp" alt="">
+                                  </div>
+                              </div>
+                              <div class="text">
+                                <h3><a href="#" >Urban areas</a></h3>
+                                  <p>Let's uncover the best places to eat, drink</p>
+                              </div>
+                              <div class="resturant-heart">
+                                  <div class="resturant">
+                                      <img src="./assets/image/p-d-image/pd-log-2.webp" alt="" class="">
+                                      <h3>Food & Restaurent</h3>
+                                  </div>
+                                  <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-slide slide-image">
+                              <div class="image">
+                                  <img src="./assets/image/p-d-image/xproperties3.webp" alt="" class="">
+                                  <div class="d-c">
+                                      <div class="d-c-i">
+                                          $$$
+                                      </div>
+                                      <div class="d-c-i">
+                                          Closed
+                                      </div>
+                                  </div>
+                                  <div class="ab">
+                                      <img src="./assets/image/p-d-image/pd-log-1.webp" alt="">
+                                  </div>
+                              </div>
+                              <div class="text">
+                                <h3><a href="#" >Urban areas</a></h3>
+                                  <p>Let's uncover the best places to eat, drink</p>
+                              </div>
+                              <div class="resturant-heart">
+                                  <div class="resturant">
+                                      <img src="./assets/image/p-d-image/pd-log-2.webp" alt="" class="">
+                                      <h3>Food & Restaurent</h3>
+                                  </div>
+                                  <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+            </div>
+            <div class="how-it-works">
+                <div class="how-it-works-container">
+                    <div class="how-it-works-text-head">
+                        <div class="how-it-works-text">
+                            <h2>How it works</h2>
+                            <p>Let's uncover the best places to eat, drink, and shop nearest to you.</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="how-it-works-button">
+                                Explore Listing
+                            </a>
+                        </div>
+                    </div>
+                    <div class="how-it-works-item">
+                        <div class="single-services-head">
+                            <div class="single-services ">
+                                <div class="services-ion">
+                                    <span>01</span>
+                                </div>
+                                <div class="services-cap">
+                                    <h5><a href="#">Find Businesses</a></h5>
+                                    <p>Discover &amp; connect with great local businesses in your local neighborhood like dentists, hair stylists and more.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-services-head">
+                            <div class="single-services ">
+                                <div class="services-ion">
+                                    <span>01</span>
+                                </div>
+                                <div class="services-cap">
+                                    <h5><a href="#">Review Listings</a></h5>
+                                    <p>Discover &amp; connect with great local businesses in your local neighborhood like dentists, hair stylists and more.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-services-head">
+                            <div class="single-services ">
+                                <div class="services-ion">
+                                    <span>01</span>
+                                </div>
+                                <div class="services-cap">
+                                    <h5><a href="#">Make a Reservation</a></h5>
+                                    <p>Discover &amp; connect with great local businesses in your local neighborhood like dentists, hair stylists and more.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="new-directory">
+                <div class="new-directory-container">
+                    <div class="explore-city-text">
+                        <h2>New Directory</h2>
+                        <p>Let's uncover the best places to eat, drink, and shop nearest to you.</p>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide slide-image">
+                              <div class="image">
+                                  <img src="./assets/image/n-d-image/newDirectory1.png.webp" alt="" class="">
+                                  <div class="d-c">
+                                      <div class="d-c-i">
+                                          $$$
+                                      </div>
+                                      <div class="d-c-i">
+                                          Closed
+                                      </div>
+                                  </div>
+                                  <div class="ab">
+                                      <img src="./assets/image/p-d-image/pd-log-1.webp" alt="">
+                                  </div>
+                              </div>
+                              <div class="text">
+                                <h3><a href="#" >Urban areas</a></h3>
+                                  <p>Let's uncover the best places to eat, drink</p>
+                              </div>
+                              <div class="resturant-heart">
+                                  <div class="resturant">
+                                      <img src="./assets/image/p-d-image/pd-log-2.webp" alt="" class="">
+                                      <h3>Food & Restaurent</h3>
+                                  </div>
+                                  <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-slide slide-image">
+                              <div class="image">
+                                  <img src="./assets/image/n-d-image/newDirectory2.png.webp" alt="" class="">
+                                  <div class="d-c">
+                                      <div class="d-c-i">
+                                          $$$
+                                      </div>
+                                      <div class="d-c-i">
+                                          Closed
+                                      </div>
+                                  </div>
+                                  <div class="ab">
+                                      <img src="./assets/image/p-d-image/pd-log-1.webp" alt="">
+                                  </div>
+                              </div>
+                              <div class="text">
+                                <h3><a href="#" >Urban areas</a></h3>
+                                  <p>Let's uncover the best places to eat, drink</p>
+                              </div>
+                              <div class="resturant-heart">
+                                  <div class="resturant">
+                                      <img src="./assets/image/p-d-image/pd-log-2.webp" alt="" class="">
+                                      <h3>Food & Restaurent</h3>
+                                  </div>
+                                  <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-slide slide-image">
+                              <div class="image">
+                                  <img src="./assets/image/n-d-image/newDirectory3.png.webp" alt="" class="">
+                                  <div class="d-c">
+                                      <div class="d-c-i">
+                                          $$$
+                                      </div>
+                                      <div class="d-c-i">
+                                          Closed
+                                      </div>
+                                  </div>
+                                  <div class="ab">
+                                      <img src="./assets/image/p-d-image/pd-log-1.webp" alt="">
+                                  </div>
+                              </div>
+                              <div class="text">
+                                <h3><a href="#" >Urban areas</a></h3>
+                                  <p>Let's uncover the best places to eat, drink</p>
+                              </div>
+                              <div class="resturant-heart">
+                                  <div class="resturant">
+                                      <img src="./assets/image/p-d-image/pd-log-2.webp" alt="" class="">
+                                      <h3>Food & Restaurent</h3>
+                                  </div>
+                                  <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+            </div>
+            <div class="news-updates">
+                <div class="news-updates-container">
+                    <div class="explore-city-text">
+                        <h2>News & Updates</h2>
+                        <p>Let's uncover the best places to eat, drink, and shop nearest to you.</p>
+                    </div>
+                    <div class="news-updates-items-container">
+                        <div class="news-updates-item">
+                            <div class="news-updates-item-con">
+                                <div class="news-location-img">
+                                    <img src="./assets/image/n-update/home-blog1.png.webp" alt="" data-pagespeed-url-hash="514932063" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                </div>
+                                <div class="news-location-details">
+                                    <a href="#" class="news-location-btn">Tips</a>
+                                    <ul>
+                                        <li>12 March I by Alan</li>
+                                    </ul>
+                                    <p><a href="#">The Best SPA Salons For Your Relaxation</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-updates-item">
+                            <div class="news-updates-item-con">
+                                <div class="news-location-img">
+                                    <img src="./assets/image/n-update/home-blog2.png.webp" alt="" data-pagespeed-url-hash="514932063" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                </div>
+                                <div class="news-location-details">
+                                    <a href="#" class="news-location-btn">Tips</a>
+                                    <ul>
+                                        <li>12 March I by Alan</li>
+                                    </ul>
+                                    <p><a href="#">The Best SPA Salons For Your Relaxation</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo-text-social">
+                <div class="footer-logo-text">
+                    <div class="footer-logo">
+                        <img src="./assets/image/logo/footer-log.webp" alt="">
+                    </div>
+                    <p>
+                        Users and submit their own items.
+                        You can create different packages
+                        and by connecting with your PayPal 
+                        or Stripe account charge users for registration 
+                        to your directory portal.
+                    </p>
+                </div>
+                <div class="social-icon">
+                    <div class="social-container">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-navigation">
+                <div class="footer-navigation-con">
+                    <div class="footer-navigation-head">
+                        <nav class="">
+                            <ul class="footer-navigation">
+                                <li class="">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Catagories</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Pages</a>
+                                    
+                                </li>
+                                <li class="">
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="add-lis-button-head">
+                        <a href="#" class="add-lis-button">
+                            Add Listing
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©2022 All rights reserved | 
+                This template is made with  <i class="fa fa-heart" ></i> by Colorlib</p>
+        </div>
+    </footer>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          slidesPerGroup: 3,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+</body>
+</html>
